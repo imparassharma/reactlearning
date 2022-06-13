@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Main from './components/main.jsx'
 
-ReactDom.render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
   <div>
     <Header/>
     <Main/>
     <Footer/>
-  </div>,document.getElementById("root")
+  </div>
 );
