@@ -1,9 +1,16 @@
 import React from "react";
+import notes from "./notes";
+import CreateNote from "./CreateNote";
 
-function Note(props){
+function Note(){
     return(
         <div className="note">
-            <p>{props.content}</p>
+           {notes.map(note=>(
+            <CreateNote
+            key= {note.id}
+            content = {note.content}
+            />
+           ))}
         </div>
     );
 }
